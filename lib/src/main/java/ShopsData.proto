@@ -1,0 +1,46 @@
+syntax = "proto3";
+message ShopData {
+
+    int32 tabType = 1;
+    string mbook = 2;
+    bool isEnd = 3;
+
+    //    List<Shop> list;
+    repeated Shop list = 4;
+
+}
+
+message Shop {
+    string avatar = 1; //": "http
+    string name = 2; //": "颜料袋家xx
+    string uname = 3; //": "袋子Bab
+    bool isCollected = 4; //":
+    int32 newNum = 5; //": 2,
+    string sale = 6; //": "销量:586
+    string recommendText = 7; //"
+    string shopUrl = 8; //": "mgj
+    string shopId = 9; //": "14t9
+    string userId = 10; //": "12rt
+    string icon = 11; //": "",
+    //    List<Goods>goods;
+    repeated Goods goods = 12;
+    int32 originOrder = 13;
+    //    List<Campaign>shopCampaigns;
+    repeated Campaign shopCampaigns = 14;
+    bool collected = 15;
+
+}
+
+message Goods {
+    string imgUrl = 1; //": "http://
+    string goodId = 2; //": "1k7lgi8
+    string originPrice = 3; //": "46
+    string discountPrice = 4; //": "
+    string goodUrl = 5; //": "mgj://
+}
+
+message Campaign {
+    string limitPrice = 1; //": "99",
+    string cutPrice = 2; //": "5",
+    string campaignDesc = 3; //": "满99元立减5元"
+}
